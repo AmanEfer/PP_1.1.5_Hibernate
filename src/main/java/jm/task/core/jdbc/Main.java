@@ -16,25 +16,20 @@ public class Main {
 
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
-        try (Connection connection = Util.getConnection()) {
-            UserService userService = new UserServiceImpl();
+        Util.getConnection();
+        UserService userService = new UserServiceImpl();
 
-            userService.createUsersTable();
+        userService.createUsersTable();
 
-            userService.saveUser("Clark", "Kent", (byte) 35);
-            userService.saveUser("Bruce", "Wayne", (byte) 40);
-            userService.saveUser("Peter", "Parker", (byte) 23);
-            userService.saveUser("Super", "Oleg", (byte) 28);
+        userService.saveUser("Clark", "Kent", (byte) 35);
+        userService.saveUser("Bruce", "Wayne", (byte) 40);
+        userService.saveUser("Peter", "Parker", (byte) 23);
+        userService.saveUser("Super", "Oleg", (byte) 28);
 
-            userService.getAllUsers().forEach(System.out::println);
+        userService.getAllUsers().forEach(System.out::println);
 
-            userService.cleanUsersTable();
+        userService.cleanUsersTable();
 
-            userService.dropUsersTable();
-
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        userService.dropUsersTable();
     }
 }

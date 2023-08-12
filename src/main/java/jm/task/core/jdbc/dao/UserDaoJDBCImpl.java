@@ -33,7 +33,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate();
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -44,7 +44,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate();
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +61,7 @@ public class UserDaoJDBCImpl implements UserDao {
             System.out.printf("User с именем %s добавлен в таблицу\n", name);
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -74,7 +74,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate();
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -97,7 +97,7 @@ public class UserDaoJDBCImpl implements UserDao {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         return users;
@@ -110,7 +110,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.executeUpdate();
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
