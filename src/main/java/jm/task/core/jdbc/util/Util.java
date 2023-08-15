@@ -17,7 +17,6 @@ public class Util {
     @Getter
     private static SessionFactory factory;
 
-
     static {
         try {
             factory = new Configuration().addAnnotatedClass(User.class).buildSessionFactory();
