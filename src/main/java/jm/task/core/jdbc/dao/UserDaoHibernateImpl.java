@@ -7,7 +7,6 @@ import org.hibernate.Session;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 @NoArgsConstructor
 public class UserDaoHibernateImpl implements UserDao {
